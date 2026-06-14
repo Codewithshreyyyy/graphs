@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projectile Motion</title>
+
+<link rel="stylesheet" href="css/projectile.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="page-container">
+
+<h1>🚀 Projectile Motion Simulator</h1>
+
+<div class="input-box">
+
+<input
+type="number"
+id="angle"
+placeholder="Angle (degrees)">
+
+<input
+type="number"
+id="velocity"
+placeholder="Velocity (m/s)">
+
+<button onclick="simulateProjectile()">
+Simulate
+</button>
+
+</div>
+
+<div id="results"></div>
+
+<canvas id="graph"></canvas>
+
+</div>
+
+<script src="js/projectile.js"></script>
+
+</body>
+</html>
