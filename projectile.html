@@ -1,48 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Simulator</title>
 
-<title>Projectile Motion</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/projectile.css">
 
-<link rel="stylesheet" href="css/projectile.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
-<div class="page-container">
+    <!-- Navbar -->
+    <nav class="navbar">
 
-<h1>🚀 Projectile Motion Simulator</h1>
+        <div class="logo">
+            🚀 PhysicsLab
+        </div>
 
-<div class="input-box">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projectile.html">Projectile</a></li>
+            <li><a href="graphs.html">Graphs</a></li>
+        </ul>
 
-<input
-type="number"
-id="angle"
-placeholder="Angle (degrees)">
+    </nav>
 
-<input
-type="number"
-id="velocity"
-placeholder="Velocity (m/s)">
+    <!-- Page Title -->
+    <section class="hero">
 
-<button onclick="simulateProjectile()">
-Simulate
-</button>
+        <h1>🚀 Projectile Motion Simulator</h1>
 
-</div>
+        <p>
+            Explore projectile motion by changing velocity,
+            angle, mass, gravity and launch height.
+        </p>
 
-<div id="results"></div>
+    </section>
 
-<canvas id="graph"></canvas>
+    <!-- Main Simulator -->
+    <section class="simulator-container">
 
-</div>
+        <!-- Control Panel -->
+        <div class="control-panel">
 
+            <h2>Controls</h2>
+
+            <label>Launch Angle (°)</label>
+            <input type="number" id="angle" value="45">
+
+            <label>Velocity (m/s)</label>
+            <input type="number" id="velocity" value="20">
+
+            <label>Mass (kg)</label>
+            <input type="number" id="mass" value="1">
+
+            <label>Gravity (m/s²)</label>
+            <input type="number" id="gravity" value="9.81">
+
+            <label>Launch Height (m)</label>
+            <input type="number" id="height" value="0">
+
+            <button onclick="simulate()">
+                Simulate
+            </button>
+
+            <button class="reset-btn" onclick="resetSimulation()">
+                Reset
+            </button>
+
+        </div>
+
+        <!-- Animation Area -->
+        <div class="canvas-panel">
+
+            <h2>Trajectory Animation</h2>
+
+            <canvas id="trajectoryCanvas"
+                    width="800"
+                    height="450">
+            </canvas>
+
+        </div>
+
+        <!-- Results -->
+        <div class="results-panel">
+
+            <h2>Results</h2>
+
+            <div class="result-card">
+                <p>Range</p>
+                <h3 id="rangeValue">0 m</h3>
+            </div>
+
+            <div class="result-card">
+                <p>Maximum Height</p>
+                <h3 id="heightValue">0 m</h3>
+            </div>
+
+            <div class="result-card">
+                <p>Flight Time</p>
+                <h3 id="timeValue">0 s</h3>
+            </div>
+
+            <div class="result-card">
+                <p>Final Velocity</p>
+                <h3 id="velocityValue">0 m/s</h3>
+            </div>
+
+            <div class="result-card">
+                <p>Kinetic Energy</p>
+                <h3 id="energyValue">0 J</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Graph Section -->
+
+    <section class="graphs-section">
+
+        <h2>Physics Analysis</h2>
+
+        <div class="graphs-grid">
+
+            <div class="graph-card">
+                <h3>Trajectory Graph</h3>
+                <canvas id="trajectoryGraph"></canvas>
+            </div>
+
+            <div class="graph-card">
+                <h3>Height vs Time</h3>
+                <canvas id="heightGraph"></canvas>
+            </div>
+
+            <div class="graph-card">
+                <h3>Velocity vs Time</h3>
+                <canvas id="velocityGraph"></canvas>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Formula Section -->
+
+    <section class="formula-section">
+
+        <h2>Projectile Motion Equations</h2>
+
+        <div class="formula-grid">
+
+            <div class="formula-card">
+                <h3>Range</h3>
+                <p>R = (v² sin 2θ) / g</p>
+            </div>
+
+            <div class="formula-card">
+                <h3>Maximum Height</h3>
+                <p>H = (v² sin²θ) / 2g</p>
+            </div>
+
+            <div class="formula-card">
+                <h3>Flight Time</h3>
+                <p>T = (2v sinθ) / g</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 PhysicsLab | Projectile Motion Simulator
+        </p>
+
+    </footer>
+
+    
+
+    <!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/projectile.js"></script>
 
 </body>

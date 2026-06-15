@@ -1,45 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PhysicsLab</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhysicsLab</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<nav class="navbar">
-<div class="logo">⚛️ PhysicsLab</div>
-<div class="nav-links">
-<a href="#">Home</a>
-<a href="#">Simulations</a>
-<a href="#">Graphs</a>
-<a href="#">About</a>
-</div>
-</nav>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
 
-<section class="hero">
-<div class="hero-content">
-<span class="tag">Interactive Physics Platform</span>
-<h1>Explore Physics Through Interactive Simulations</h1>
-<p>Visualize motion, trajectories, forces and physics graphs in a modern web experience.</p>
+            <div class="logo">
+                <i class="fa-solid fa-atom"></i>
+                <span>PhysicsLab</span>
+            </div>
 
-<div class="buttons">
-<button onclick="window.location='projectile.html'">
-Launch Simulator
-</button>
-<button onclick="window.location='graphs.html'">
-View Graphs
-</button>   
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="projectile.html">Projectile</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="custom-graph.html">Custom Graph</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+            </ul>
 
-</div>
-</section>
+        </nav>
+    </header>
 
-<section class="stats">
-<div><h2>8+</h2><p>Simulators</p></div>
-<div><h2>20+</h2><p>Graph Types</p></div>
-<div><h2>100%</h2><p>Browser Based</p></div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                Interactive Physics Platform
+            </div>
+
+            <h1>
+                Explore Physics Through
+                Interactive Simulations
+            </h1>
+
+            <p>
+                Visualize motion, trajectories, forces and
+                physics graphs in a modern browser-based
+                laboratory.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="projectile.html" class="btn btn-primary">
+                    Launch Simulator
+                </a>
+
+                <a href="#features" class="btn btn-secondary">
+                    Explore Features
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+
+        <!-- Projectile -->
+
+        <div class="card">
+
+            <div class="icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <h3>Projectile Simulation</h3>
+
+            <p>
+                Simulate projectile motion using velocity,
+                launch angle and gravity controls.
+            </p>
+
+            <a href="projectile.html">
+                Launch →
+            </a>
+
+        </div>
+
+        <!-- Other Graphs -->
+
+        <div class="card">
+
+            <div class="icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Other Graphs</h3>
+
+            <p>
+                Explore displacement-time, velocity-time,
+                acceleration and many more graphs.
+            </p>
+
+            <a href="graphs.html">
+                Open →
+            </a>
+
+        </div>
+
+        <!-- Custom Graphs -->
+
+        <div class="card">
+
+            <div class="icon">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+
+            <h3>Custom Graph Builder</h3>
+
+            <p>
+                Create your own mathematical and
+                scientific graphs dynamically.
+            </p>
+
+            <a href="custom-graph.html">
+                Create →
+            </a>
+
+        </div>
+
+        <!-- Suggestions -->
+
+        <div class="card">
+
+            <div class="icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>Suggestions</h3>
+
+            <p>
+                Share ideas, report bugs and suggest
+                new simulations for PhysicsLab.
+            </p>
+
+            <a href="suggestions.html">
+                Submit →
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-box">
+            <h2>8+</h2>
+            <p>Simulators</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>20+</h2>
+            <p>Graph Types</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Browser Based</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>24/7</h2>
+            <p>Accessible</p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 PhysicsLab | Developed by Shreyansh Kumar
+        </p>
+
+    </footer>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
 
 </body>
 </html>
